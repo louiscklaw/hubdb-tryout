@@ -23,7 +23,7 @@ var db = Hubdb({
 db.get(TEST_DB,(err, current_contents)=>{
   console.log(current_contents)
 
-  var updated_content = [...current_contents,{hello: 'travis'}]
+  var updated_content = [...current_contents,{hello: 'travis1'}]
 
   db.update(TEST_DB,updated_content,(err, result, id) => {
     console.log(err)
