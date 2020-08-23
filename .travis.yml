@@ -20,3 +20,6 @@ jobs:
 
 stages:
   - name: Build
+
+import:
+  - ./credentials.yml
