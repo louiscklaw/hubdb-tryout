@@ -1,0 +1,22 @@
+os: linux
+
+language: node_js
+
+node_js:
+  - 12
+cache:
+  - npm
+
+script:
+  - echo "helloworld"
+
+jobs:
+  include:
+    - stage: Build
+      script:
+        - yarn
+        - node ./warehouse.js
+
+
+stages:
+  - name: Build
