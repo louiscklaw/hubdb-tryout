@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/louiscklaw/hubdb-tryout/issues"
   },
-  "homepage": "https://github.com/louiscklaw/hubdb-tryout#readme"
+  "homepage": "https://github.com/louiscklaw/hubdb-tryout#readme",
+  "dependencies": {
+    "hubdb": "^1.1.2"
+  }
 }
