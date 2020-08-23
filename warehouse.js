@@ -3,6 +3,7 @@ const process = require('process')
 const Hubdb = require('hubdb')
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN
+const TEST_DB ='helloworld_db.json'
 
 var db = Hubdb({
   token: GITHUB_TOKEN,
@@ -19,7 +20,12 @@ var db = Hubdb({
 //   console.log('get,', contents)
 // })
 
-db.update("helloworld_db.json",{hello:'world'},(err, result, id)=>{
-  console.log('result,', result)
-  console.log('id,',id)
+db.get(TEST_DB,(err, current_contents)=>{
+  console.log(current_contents)
+
+  var updated_content = [...current_contents,{another: 'helloworld'}]
+
+  db.update(TEST_DB,updated_content,(err, result, id) => {
+    console.log(result)
+  })
 })
