@@ -10,6 +10,7 @@ var db = Hubdb({
   repo: 'hubdb-tryout',
   branch: 'db'
  });
+
  db.add({ grass: 'red' }, function() {
    db.list(function(err, res) {
      console.log(res)
