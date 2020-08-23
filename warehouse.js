@@ -3,7 +3,7 @@ const process = require('process')
 const Hubdb = require('hubdb')
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN
-const TEST_DB ='db/helloworld_db.json'
+const TEST_DB ='helloworld_db.json'
 
 var db = Hubdb({
   token: GITHUB_TOKEN,
