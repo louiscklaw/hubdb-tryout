@@ -26,6 +26,7 @@ db.get(TEST_DB,(err, current_contents)=>{
   var updated_content = [...current_contents,{hello: 'travis'}]
 
   db.update(TEST_DB,updated_content,(err, result, id) => {
+    console.log(err)
     console.log(result)
   })
 })
