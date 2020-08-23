@@ -11,21 +11,9 @@ var db = Hubdb({
   branch: 'db'
   });
 
-
-
-
-
-function initDB(){
-  db.add({ }, function() {
-    db.list(function(err, res) {
-    console.log(res)
-    });
-  });
-}
-
-// db.list((err, a)=>{
-//   console.log('listing,', a)
-// })
+db.list((err, a)=>{
+  console.log('listing,', a)
+})
 
 // db.get("4c30d8a1b5dcde897cc51aca2a8abfab.json",(err, contents)=>{
 //   console.log('get,', contents)
@@ -35,5 +23,3 @@ function initDB(){
 //   console.log('result,', result)
 //   console.log('id,',id)
 // })
-
-initDB()
